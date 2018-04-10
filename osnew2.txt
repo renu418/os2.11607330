@@ -1,0 +1,14 @@
+for(i = 0; i < limit; i++)
+      {
+            position = i;
+            for(j = i + 1; j < limit; j++)
+            {
+                  if(priority[j] < priority[position])
+                  {
+                        position = j;
+                  }
+            }
+            temp = priority[i];
+            priority[i] = priority[position];
+            priority[position] = temp; 
+            temp = burst_time[i];
